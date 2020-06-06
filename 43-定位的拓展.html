@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>定位的拓展(水平垂直居中)</title>
+    <style>
+      .box {
+        /* 绝对定位的盒子  margin: 0 auto 不能实现水平居中*/
+        /* 绝对定位 */
+        position: absolute;
+        /* 1.left走50% */
+        left: 50%;
+        /* 2.margin 为负值盒子宽度的一半  */
+        margin-left: -100px;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

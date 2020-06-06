@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>盒子阴影</title>
+    <style>
+      div {
+        width: 500px;
+        height: 500px;
+        margin: 100px auto;
+        background-color: pink;
+      }
+      /* 鼠标经过  盒子阴影 */
+      div:hover {
+        /* 1 h-shadow 必须 水平阴影的位置 可为负值*/
+        /* 2 v-shadow 必须 垂直阴影的位置 可为负值*/
+        /* 3 blur 可选 模糊距离 */
+        /* 4 spread 可选 阴影的尺寸 */
+        /* 5 color 阴影的颜色 */
+        /* 6 inset 默认外部(outset) */
+        /* box-shadow: 10px 10px 10px 10px black; */
+        box-shadow: 10px 10px 10px -4px black;
+        /* 文字阴影 */
+        /* 1 h-shadow  */
+        /* 2 v-shadow  */
+        /* 3 blur  */
+        /* 4 color  */
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div>文字阴影</div>
+  </body>
+</html>

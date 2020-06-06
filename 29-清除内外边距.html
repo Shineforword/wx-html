@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>清除内外边距</title>
+    <style>
+      /* 这句话是CSS */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      /* 行内元素为了照顾兼容性,尽量只设置左右内外边距 不设置上下内外边距  但是转化为块级元素和行内元素就可以 */
+      span {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      123
+      <li>123</li>
+    </ul>
+    <span>行内元素为了照顾兼容性,尽量只设置左右内外边距</span>
+  </body>
+</html>

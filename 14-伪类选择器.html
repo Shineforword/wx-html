@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器</title>
+  </head>
+  <style>
+    /* 未访问过的链接 */
+    a:link {
+      color: #333333;
+      text-decoration: none;
+    }
+    /* 已访问过的链接 */
+    a:visited {
+      color: red;
+    }
+    /* 鼠标经过 */
+    a:hover {
+      color: skyblue;
+    }
+    /* 鼠标正在按下 还未弹起 */
+    a:active {
+      color: green;
+    }
+    /* 链接伪类的注意事项:
+    1.为确保生效,请遵循声明顺序LVHA: link visited hover active
+    2.链接a在浏览器中具有默认样式.所以实际工作中需要单独指定样式
+    实际应用时.一般先给a设置一个样式,再设置hover状态下的样式
+     */
+
+    /* :focus伪类选择器 */
+    input:focus {
+      background-color: pink;
+    }
+  </style>
+  <body>
+    <h1>伪类选择器:用于向某些选择器添加特殊效果</h1>
+    <h4>伪类选择器的特点:是采用(:)表示</h4>
+    <p>链接伪类选择器</p>
+    <a href="#">小猪佩奇</a>
+    <a href="http://www.baidu.com" target="blank">小猪佩奇</a>
+    <h4>:focus伪类选择器</h4>
+    <p>用于获得焦点的表单元素,该选择器主要针对表单元素(焦点就是光标)</p>
+    <input type="text" class="te" />
+  </body>
+</html>

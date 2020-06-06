@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>背景颜色</title>
+  </head>
+  <style>
+    body {
+      /* 背景颜色 */
+      /* background-color: pink; */
+      /* 背景图片:实际开发中常见于logo或者一些装饰性的图片或者logo 优点是非常便于控制位置
+        默认:none 
+      */
+      /* background-image: url(https://ossweb-img.qq.com/upload/webplat/info/yxzj/20200402/52387496716921.jpg); */
+      /* 1.背景图片不平铺 */
+      /* background-repeat: no-repeat; */
+      /* 2.平铺 */
+      /* background-repeat: repeat; */
+      /* 沿着x */
+      /* background-repeat: repeat-x; */
+      /* 沿着y */
+      /* background-repeat: repeat-y; */
+      /* 页面元素既可以添加背景颜色也可以添加背景图片只不过背景图片会压住背景颜色 */
+      /* 背景图片的位置(xy) 方位名词(top等) 精确单位  与方位名词的顺序无关 */
+      /* 可以写一个方位参数 另外一个就是默认的 */
+
+      /* 超大背景图片(水平居中) */
+      /* background-position: center top; */
+      /*  精确范围 有严格的顺序*/
+      /* background-position: 100px 100px; */
+      /* 混合单位 */
+      /* background-position: 100px top; */
+
+      /* 背景附着:默认scroll 滚动 fixed固定 */
+      /* background-attachment: fixed; */
+      /* 背景符合写法(没有顺序要求) */
+      background: pink
+        url(https://ossweb-img.qq.com/upload/webplat/info/yxzj/20200402/52387496716921.jpg)
+        no-repeat center top;
+    }
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+    }
+    h3 {
+      width: 200px;
+      height: 40px;
+      font-weight: 400;
+      line-height: 40px;
+      background-image: url();
+      background-repeat: no-repeat;
+      background-position: left center;
+      text-indent: 1.5em;
+    }
+  </style>
+  <body>
+    <div></div>
+    <!-- 垂直居中的小图 -->
+    <h3>成长守护平台</h3>
+  </body>
+</html>

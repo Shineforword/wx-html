@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmet语法</title>
+    <style>
+      /* 我想把ol中的li选出来,改为pink */
+      /* 后代选择器:元素1 元素2 { 样式声明 } 
+           1.元素与元素之间必须用空格隔开
+           2.元素1是父级 元素2是子级 最终选择的是元素2 
+        */
+      ol li {
+        color: royalblue;
+      }
+      ol li a {
+        color: red;
+        text-decoration: none;
+      }
+      .more ol li {
+        color: red;
+      }
+      /* 子元素选择器 */
+      /* 只能选择某元素最近一级的子元素,简单理解就是选所有的亲儿子元素(子一级)*/
+      .girl > a {
+        color: red;
+      }
+      .nav div ul > li {
+        color: red;
+      }
+      .pig > a {
+        color: red;
+      }
+      /* 并集选择器: 可以选择多组标签,同时为他们定义相同的样式(通常用于集体声明) 元素1(逗号)元素2{样式声明}*/
+      div,
+      p,
+      .pigg {
+        color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h4>Emmet语法</h4>
+    <ul>
+      快速生成html结构
+      <li>生成标签</li>
+      <li>生成多个标签(标签名*数字)</li>
+      <li>父子关系标签用>号</li>
+      <li>兄弟关系用+号</li>
+    </ul>
+    <ul>
+      快速生成CSS样式
+      <li></li>
+    </ul>
+    <h4>CSS复合选择器</h4>
+    <p>复合选择器是建立在基本选择器之上的,对基本选择器的组合</p>
+    <p>常用的复合选择器:后代选择器,子选择器,并集选择器,伪类选择器</p>
+    <h5>后代选择器</h5>
+    <ul>
+      <li>我只是个孩子</li>
+      <li>我只是个孩子</li>
+      <li>我只是个孩子</li>
+      <li></li>
+    </ul>
+    <ol>
+      <li>我只是个孩子</li>
+      <li>我只是个孩子</li>
+      <li><a href="#">孙子</a></li>
+    </ol>
+
+    <ol class="more">
+      <li>我只是个孩子</li>
+      <li>我只是个孩子</li>
+      <li>我只是个孩子</li>
+      <li>我只是个孩子</li>
+      <li>我只是个孩子</li>
+      <li><a href="#">孙子</a></li>
+    </ol>
+
+    <h4>子元素选择器</h4>
+    <div class="girl">
+      <a href="">女孩</a>
+      <p>
+        <a href="boy">女孩</a>
+      </p>
+    </div>
+    <div class="nav">
+      <ul>
+        子元素选择器
+        <li><a href="#">百度</a></li>
+        <li><a href="#">新浪</a></li>
+      </ul>
+    </div>
+    <div class="pig">
+      请将猪肘子改为红色
+      <a href="#">猪肘子</a>
+      <a href="#">猪腰子</a>
+      <a href="#">猪肝</a>
+      <ul>
+        <a href="#">猪尾巴</a>
+        <li><a href="#">猪蹄子</a></li>
+      </ul>
+    </div>
+    <h4>并集选择器</h4>
+    <div>熊大</div>
+    <p>熊二</p>
+    <span>光头强</span>
+    <ul class="pigg">
+      <li>佩奇</li>
+      <li>佩奇</li>
+      <li>佩奇</li>
+    </ul>
+  </body>
+</html>

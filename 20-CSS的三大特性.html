@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS的三大特性</title>
+    <style>
+      /* p标签继承了div的颜色 */
+      div {
+        color: pink;
+        font-size: 30px;
+      }
+      /* 行高继承 */
+      body {
+        color: pink;
+        /* 定义了文字大小12px 行高1.5em */
+        /* 注意:子元素继承了父元素的行高倍数(展示为当前元素大小的1.5倍) */
+        font: 20px/1.5 'Microsoft yahei';
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>CSS的三大特性</h3>
+    <ul>
+      层叠性
+      <li>样式属性冲突情况,就近原则,展示覆盖</li>
+    </ul>
+    <ul>
+      继承性
+      <li>子标签会继承父标签的-某些-属性</li>
+      <li>跟文字相关的可以继承(text-,font-,line ) 还有颜色</li>
+    </ul>
+    <div><p>龙生龙凤生凤</p></div>
+    <p>龙生龙凤生凤</p>
+    <ul>
+      行高的继承:可继承倍数,子元素不设置行高,则继承父元素的行高
+      <li></li>
+    </ul>
+    <ul>
+      优先级
+      <li>选择器相同,执行层叠性</li>
+      <li>选择器不同,执行优先级(选择器权重)</li>
+    </ul>
+  </body>
+</html>

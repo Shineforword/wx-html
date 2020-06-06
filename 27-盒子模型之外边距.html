@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>外边距</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+      /* .one {
+        margin-bottom: 20px;
+      } */
+      .two {
+        /* margin-top: 20px; */
+        /* 复合写法:与padding相同 */
+        margin: 20px;
+        margin: 20px 40px;
+      }
+      /* 块级元素水平居中 */
+      .header {
+        /* 盒子必须指定了宽度 */
+        width: 500px;
+        /* 上下0 左右自动 */
+        margin: 0 auto;
+        /* 行内元素  或行内块元素居中 给其父元素添加text-align:center */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>外边距:控制盒子与盒子之间的距离</h4>
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <!-- 外边距的典型应用:块级元素水平居中 -->
+    <div class="header"><span>文字水平居中</span></div>
+    <h4></h4>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>清除浮动</title>
+    <style>
+      /* 通配符选择器 */
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      /* 父级盒子不设置高度 */
+      .box {
+        margin: 100px 100px 0px;
+        background-color: pink;
+        /* 清除浮动:2.父级元素添加overflow属性 */
+        /* 超出隐藏(缺点溢出隐藏) */
+        /* overflow: hidden; */
+      }
+
+      /* 伪元素清除浮动(常用) */
+      /* .clearfix:after {
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+      .clearfix {
+        /* IE6 IE7专有 */
+      /* *zoom: 1; */
+      /* } */
+      /* ************ */
+
+      /* 双伪元素清除浮动 */
+      .clearfix:before,
+      .clearfix:after {
+        content: '';
+        display: table;
+      }
+      .clearfix:after {
+        clear: both;
+      }
+      .clearfix {
+        /* IE6 IE7专有 */
+        *zoom: 1;
+      }
+      /* *********** */
+      .one {
+        float: left;
+        width: 100px;
+        height: 300px;
+        background-color: red;
+      }
+      .two {
+        float: left;
+        width: 100px;
+        height: 300px;
+        background-color: yellowgreen;
+      }
+      .three {
+        float: left;
+        width: 100px;
+        height: 300px;
+        background-color: green;
+      }
+      .footer {
+        /* margin: 100px auto; */
+        height: 100px;
+        background-color: skyblue;
+      }
+      /* 额外标签法 */
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 为什么清除浮动? -->
+    <!-- 由于父盒子很多情况下不方便给高度,但是子盒子不浮动又不占有位置,最后父级盒子高度为0时,就会影响下面标准流的盒子 -->
+    <!-- 1额外标签法(隔墙法) -->
+    <!-- 2父级添加overflow -->
+    <!-- 3父级添加after伪元素 -->
+    <!-- 4父级添加双伪元素 -->
+
+    <!--  3.伪元素清除浮动:clearfix-->
+    <!-- <div class="box clearfix"> -->
+    <!-- 4.双伪元素清除浮动 -->
+    <!--  -->
+    <div class="box clearfix">
+      <div class="one">大毛</div>
+      <div class="two">二毛</div>
+      <div class="three">三毛</div>
+      <!-- 额外标签(隔墙法)-->
+      <!-- 添加的标签必须是块级元素 不能是行内元素 -->
+      <!-- <div class="clear"></div> -->
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浮动</title>
+    <style>
+      .left {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        float: left;
+        line-height: 100px;
+      }
+      .right {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        /* float属性用于创建浮动框 将其移动到一遍 知道左边缘或右边缘触及包含块或者另一个浮动框的边缘 */
+        float: right;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      网页布局的第一原则:多个块级元素纵向排列找标准流,多个块级元素纵向排列找浮动
+    </h1>
+    <h4>标准流(普通流或者文档流)</h4>
+    <p>标签按照默认规定好的方式排列</p>
+    <h4>浮动</h4>
+    <p>为什么要用浮动?</p>
+    <p>
+      总结:有很多的布局效果,标准流没有办法完成,此时就可以利用浮动完成布局,因为浮动可以改变元素标签的默认的排列方式,浮动最典型的应用:可以让多个块级元素在一行内排列显示
+    </p>
+
+    <div class="left">左青龙</div>
+    <div class="right">右白虎</div>
+  </body>
+</html>

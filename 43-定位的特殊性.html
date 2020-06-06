@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>定位的特殊性</title>
+    <style>
+      span {
+        /* 加了定位之后 */
+        position: absolute;
+        top: 300px;
+        width: 100px;
+        height: 200px;
+        background-color: pink;
+      }
+      div {
+        /*  */
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 定位的特殊性 -->
+    <!-- 1.行内元素添加绝对或者固定定位,可以直接设置高度和宽度 -->
+    <!-- 2.块级元素添加绝对或者固定定位,如果不给宽度或者高度,默认大小是内容的大小 -->
+    <!-- 3.脱标的盒子,不会触发外边距塌陷合并的问题 -->
+
+    <!-- 4.绝对定位或固定定位 会完全压住盒子 -->
+    <!-- 浮动元素不同,只会压住她下面的标准流盒子,但是不会压住下面标准流盒子里边的文字或图片 -->
+    <span>123</span>
+    <div>123</div>
+  </body>
+</html>

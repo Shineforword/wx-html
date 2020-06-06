@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>权重的叠加</title>
+    <style>
+      /* 符合选择器的权重叠加 */
+      /* li权重: 元素选择器0001 */
+      li {
+        color: red;
+      }
+      /* ul li权重:0001+0001 = 0002 */
+      ul li {
+        color: pink;
+      }
+      /* 权重会叠加  永远不会进位 */
+    </style>
+  </head>
+  <ul>
+    <li>大猪</li>
+    <li>小猪</li>
+    <li>蠢猪</li>
+  </ul>
+  <body></body>
+</html>

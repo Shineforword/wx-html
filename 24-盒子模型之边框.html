@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>边框</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        /*  边框粗细,一般用px单位*/
+        border-width: 5px;
+        /* 边框的样式 solid 实线 dashed 虚线边框  dotted 点线边框 */
+        border-style: solid;
+        /* 边框颜色 */
+        border-color: pink;
+        /* 边框的复合写法 无先后顺序 */
+        border: 1px red solid;
+        /* 边框的上下左右设置 */
+        border-top: dashed 2px pink;
+        border-left: dotted 5px skyblue;
+        /* 边框会影响盒子的实际大小() */
+      }
+    </style>
+  </head>
+  <body>
+    <div>关关雎鸠,在河之洲</div>
+  </body>
+</html>

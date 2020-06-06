@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>垂直外边距塌陷</title>
+    <style>
+      /*
+      父子级元素 父子都有外边距  父元素塌陷
+      .father {
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+        margin-top: 50px;
+      }
+      .son {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        margin-top: 100px;
+      }*/
+      /* 解决方案
+      1.可以为父元素定义上边框
+      2.可以为父元素定义上内边距
+      3.可以为父元素添加overflow:hidden
+       */
+      .father {
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+        margin-top: 50px;
+        /* 透明边框 */
+        /* border: 1px solid transparent; */
+        /* 内边距 */
+        /* padding-top: 1px; */
+        overflow: hidden;
+      }
+      .son {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+  </body>
+</html>

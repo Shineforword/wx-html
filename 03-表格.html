@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表格</title>
+    <style>
+      table {
+        width: 500px;
+        height: 250px;
+      }
+      table,
+      tbody,
+      th,
+      td {
+        border: pink 1px solid;
+        /* 相邻边框合并 */
+        border-collapse: collapse;
+        font-size: 14px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>表格</h1>
+    <p>表格的基本语法</p>
+    <h2>建立反馈机制</h2>
+    <h2>正反馈机制</h2>
+    <h2>负反馈机制</h2>
+    <!-- 表 -->
+    <table>
+      <!-- 行 -->
+      <tr>
+        项目启动前的准备工作
+        <!-- 列(单元格) -->
+        <td>PM</td>
+        <td>RD</td>
+        <td>QA</td>
+      </tr>
+      <tr>
+        <td>文档清晰</td>
+        <td>文档清晰</td>
+        <td>文档清晰</td>
+      </tr>
+      <tr>
+        <td>文档清晰</td>
+        <td>文档清晰</td>
+        <td>文档清晰</td>
+      </tr>
+    </table>
+
+    <!-- align 表格展示 -->
+    <!-- 单元格之间距离cellspacing -->
+    <table align="left" cellspacing="0">
+      <!-- th 表示表格的表头部分(table head缩写) 表头单元格加粗居中显示-->
+      <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+      </tr>
+      <tr>
+        <td align="center">前</td>
+        <td align="center">30</td>
+      </tr>
+      <!-- 表格属性的设置 通过CSS设置 -->
+    </table>
+
+    <table align="left" cellspacing="0">
+      <!-- 表头 -->
+      <thead>
+        <tr>
+          <th>排名</th>
+          <th>关键词</th>
+          <th>趋势</th>
+          <th>今日搜索</th>
+          <th>最近七日</th>
+          <th>相关链接</th>
+        </tr>
+      </thead>
+      <!-- 表 -->
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>鬼吹灯</td>
+          <td><img src="" alt="趋势图" /></td>
+          <td>456</td>
+          <td>123</td>
+          <td>
+            <a href="内部网页链接.html" target="blank">贴吧</a>
+            <a href="内部网页链接.html" target="blank">图片</a>
+            <a href="内部网页链接.html" target="blank">百科</a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>西游记</td>
+          <td><img src="" alt="趋势图" /></td>
+          <td>456</td>
+          <td>123</td>
+          <td>
+            <a href="内部网页链接.html" target="blank">贴吧</a>
+            <a href="内部网页链接.html" target="blank">图片</a>
+            <a href="内部网页链接.html" target="blank">百科</a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>水浒传</td>
+          <td><img src="" alt="趋势图" /></td>
+          <td>456</td>
+          <td>123</td>
+          <td>
+            <a href="内部网页链接.html" target="blank">贴吧</a>
+            <a href="内部网页链接.html" target="blank">图片</a>
+            <a href="内部网页链接.html" target="blank">百科</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zn-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 合并单元格 -->
+    <!-- 合并单元格的方式:1.跨行合并:rowspan="合并单元格的个数" 2.跨列合并:colspan="合并单元格的列数" -->
+    <!-- 目标单元格:1.跨行:最上侧单元格为目标单元格,写合并代码 2.跨列:最左侧单元格为目标单元格-->
+    <!-- 合并单元格步骤:
+        1.确定跨行和跨列
+        2.找到目标单元格,写上合并方式=合并数量
+        3.删除多余的单元格
+     -->
+    <table align="left" cellpadding ="0" cellspacing ="0" width="500" border="1" height="100">
+        <tr align="center">
+            <td>1</td>
+            <td colspan="2" align="center">2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2" align="center">3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>
+</body>
+</html>

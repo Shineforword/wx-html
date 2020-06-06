@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浮动盒子</title>
+    <style>
+      .box {
+        /* 浮动的元素不会压住下面标准流的文字或图片(浮动最初产生的目的就是做文字环绕的) */
+        /* float: left; */
+        /*  绝对定位的盒子会压住下面标准流的内容*/
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <p>中不选中中不中</p>
+  </body>
+</html>
